@@ -6,9 +6,9 @@ import startOfWeek from 'date-fns/startOfWeek';
 import getDay from 'date-fns/getDay';
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import React, {useState} from 'react';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
+import Header from './pages/components/header';
 
 const locales = {
   "en-us": require("date-fns/locale/en-US")
@@ -51,8 +51,9 @@ function handleAddEvent(){
 
 
   return (
-    <div className="App">
-      <h1>Calendar</h1>
+    <div className="App parallax">
+      <h1 className='headerClass'>Workout Tracker</h1>
+
       <h2>Add a workout</h2>
       <div>
         <input type="text" placeholder= "Add Workout" style={{width: "20%", marginRight: "10px"}}
@@ -69,7 +70,7 @@ function handleAddEvent(){
     events={allEvents} 
     startAccessor = "start" 
     endAccessor ="end" 
-    style={{height: 500, margin: "50px"}}
+    style={{height: 500, margin: "200epx"}}
      /> 
     </div>
   );
