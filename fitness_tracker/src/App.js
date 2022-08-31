@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import Header from './pages/components/header';
-
+import  Button  from '@mui/material/Button';
 const locales = {
   "en-us": require("date-fns/locale/en-US")
 }
@@ -33,7 +33,13 @@ const events =[
     allDay: true, 
     start: new Date(2022,7,28),
     end: new Date(2022,7,28)
-  }
+  },
+  {
+    title:"15 min arm",
+    allDay: true, 
+    start: new Date(2022,7,29),
+    end: new Date(2022,7,29)
+  },
 ]
 
 
@@ -52,10 +58,12 @@ function handleAddEvent(){
 
   return (
     <div className="App parallax">
+ 
       <h1 className='headerClass'>Workout Tracker</h1>
 
+      
+      <div className='headerClasso'>
       <h2>Add a workout</h2>
-      <div>
         <input type="text" placeholder= "Add Workout" style={{width: "20%", marginRight: "10px"}}
         value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value}) }
         />
@@ -63,7 +71,7 @@ function handleAddEvent(){
         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}/>
         <DatePicker placeholderText='End Date' 
         selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}/>
-        <button style={{marginTop: "10px"}} onClick={handleAddEvent}>Add workout!</button>
+        <Button variant="contained" style={{marginTop: "10px"}} onClick={handleAddEvent}>Add workout!</Button>
       </div>
     <Calendar
      localizer={localizer} 
