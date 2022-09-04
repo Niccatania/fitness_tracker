@@ -25,20 +25,44 @@ const events =[
   {
     title:"Upper Body",
     allDay: true, 
-    start: new Date(2022,7,28),
-    end: new Date(2022,7,28)
+    start: new Date(2022,7,29),
+    end: new Date(2022,7,29)
   },
   {
     title:"Lower Body",
     allDay: true, 
-    start: new Date(2022,7,28),
-    end: new Date(2022,7,28)
+    start: new Date(2022,7,29),
+    end: new Date(2022,7,29)
   },
   {
     title:"15 min arm",
     allDay: true, 
-    start: new Date(2022,7,29),
-    end: new Date(2022,7,29)
+    start: new Date(2022,7,30),
+    end: new Date(2022,7,30)
+  },
+  {
+    title:"20 min leg",
+    allDay: true, 
+    start: new Date(2022,7,31),
+    end: new Date(2022,7,31)
+  },
+  {
+    title:"20 min Upper Body",
+    allDay: true, 
+    start: new Date(2022,8,2),
+    end: new Date(2022,8,2)
+  },
+  {
+    title:"10 min abs",
+    allDay: true, 
+    start: new Date(2022,8,2),
+    end: new Date(2022,8,2)
+  },
+  {
+    title:"10 min arms",
+    allDay: true, 
+    start: new Date(2022,8,3),
+    end: new Date(2022,8,3)
   },
 ]
 
@@ -58,7 +82,7 @@ function handleAddEvent(){
 
   return (
     <div className="App parallax">
- 
+
       <h1 className='headerClass'>Workout Tracker</h1>
 
       
@@ -78,7 +102,7 @@ function handleAddEvent(){
     events={allEvents} 
     startAccessor = "start" 
     endAccessor ="end" 
-    style={{height: 500, margin: "200epx"}}
+    style={{height: 300, width: 400, margin: "75px"}}
      /> 
     </div>
   );
